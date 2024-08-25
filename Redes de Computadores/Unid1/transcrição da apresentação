@@ -1,0 +1,200 @@
+Olá, meu nome é Fernanda Costa e essa é a apresentação do resumo da unidade 1 da disciplina de Redes de Computadores.
+
+A primeira unidade está dividida em alguns topicos que estão listados aqui no slide, além de alem
+Comunicação de Dados
+A comunicação enveolve a troca de informações entre um emissor e repector por um meio e através de regras que tornem a mensagem enviada entendível.
+
+
+Um sistema básico de comunicação de dados é composto de cinco elementos
+
+1. Mensagem: é a informação a ser transmitida. Pode ser constituída de texto, números, figuras, áudio e vídeo – ou qualquer combinação desses.
+2. Transmissor: é o dispositivo que envia a mensagem de dados. Pode ser um computador, uma estação de trabalho, um telefone, uma câmera de vídeo e assim por diante.
+3. Receptor: é o dispositivo que recebe a mensagem. Pode ser um computador, uma estação de trabalho, um telefone, uma câmera de vídeo e assim por diante.
+4. Meio: é o caminho físico por onde viaja uma mensagem originada e dirigida ao receptor.
+5. Protocolo: é um conjunto de regras que governa a comunicação de dados. Ele representa um acordo entre os dispositivos que se comunicam.
+
+O quão bom um sistema de comunicação de dados  é, depende fundamentalmente de três características:
+
+1. Entrega: os dados devem chegar ao destino correto e ser recebidos somente pelo dispositivo ou usuário de destino.
+2. Confiabilidade: deve haver a garantia que os dados sejam entreguem sem serem modificados ou corrompidos na transmissão.
+3. Tempo de atraso: os dados devem ser entregues em um tempo finito e predeterminado. Por exemplo, no caso de transmissões multimídia, ao enviar uma foto pelo wpp, a foto deve ser entregue sem atrasos. é importante falar sobre a comunicação, porque um dos objetivos das redes de computadores é permitir essa troca de dados entre computadores.
+
+a maioria das informações em redes de computadores é transportada em pacotes. Um pacote de rede é uma unidade de dados formatada (uma lista de bits ou bytes que são carregados por uma rede comutada por pacotes. Os pacotes são enviados através da rede para o seu destino. Uma vez que os pacotes chegam, eles são remontados em sua mensagem original.
+
+REDES DE COMPUTADORES
+
+O que é uma rede de computadores?
+Uma rede de computadores é a conexão de dois ou mais computadores para permitir o
+compartilhamento de recursos e a troca de informações entre as máquinas.
+
+e isso só é possivel graças a uma serie de recursos de harware e software.
+
+- cOMPONENTES, roteador: determina a proxima rede para o qual o conjunto de dados tem que ser transmitido, com o objetivo de chegar a um destino.
+
+O QUE É INTERNET?
+A internet também é uma rede, ela é um sistema global de redes de computadores interligadas, é uma rede de várias outras redes que tem o proposito de servir usuarios do mundo todo utilizando para isso um conjunto de protocolos.
+
+cONCEITO
+ Então atualmente existe a tendencia d eque cada vez mais dispositivos (tvs, celulares, carros etc) estejam conectados a internet, esses equipamentos são chamados de sistemas finais ou hospedeiros/hosts; Os hosts são conectados entre si por enlaces de comunicação e comutadores de pacotes.
+ De uma forma bem sussinta, comutador de pacote é uma forma de armazenar e 
+ transferir pequenos bits de dados através de redes diferentes. Esses pacotes são enviados pelos nós 
+ 
+Enlace:
+se refere à ligação entre dispositivos de comunicação em dois ou mais locais, que possibilita transmitir e receber informações.
+  existem muitos Tipos de enlace, são constituidos de diferentes tipos de meios fisicos.
+
+
+
+
+\\\\   Arquiteturas e Padrões   ||||||||
+
+Eu falei um pouco sobre comunicação e agora vou falar sobre protocolos, porque a comprensão desses conceitos é essencial para entender melhor como a comunicação ocorre em uma rede.
+
+Toda comunicação por uma rede acontece por meio de regras que são chamadas de protocolos. Esses protocolos existem para padronizar a comunicação na rede e a interação de diversos protocolos diferentes.
+
+Esses protocolos são implementados nos hardwares e softawares e são carregados em cada host e dispositivops de rede. Muitos protocolos seguem pasdões impostos pela industria, isso garante que haja uma comunicação efieciente entre produtos de fabricantes diferentes. 
+
+Ex: IEEE, 3GPP, IETF
+São implementados de forma hierarquica em uma pilha de camadas, onde cada camada depende do que foi implementados na camada abaixo dela, nos niveis inferiores.
+
+A ideia de se ter um padrão um modelo é poder estabelecer regras para que a interconectividade entre dois dispositivos de empresas diferentes possa acontecer de forma eficiente. O modelo Osi surgiu da ISO que é uma empresa que estabele diversas normas tecnicas.
+
+Modelo OSI
+
+é um modelo de referencia, não é utilizado na pratica.
+ele é dividido em 7 camadas, cada uma delas é responsavel por uma parte da comunicação exiastwent entre 2 dispositivosa de rede.
+
+A camada física estabelece a comunicação real entre dois dispositivos, ela é responsavel pelo cabeamento, parte eletrica, ou caracteriticas opticas ou eletromagneticas
+
+A camada de Enlace de dados é resposavem pela detecao e correção de erros que possam ter ocorrido no nivel fisico, tambem controla o fluxo da transmissao dos dados entre um dispositivo e outro.
+
+A camada de rede é resposavel pelo endereçamento dos dispositivos na rede, tambem é resposabilidade dessa camada o caminho que as informações tem que percorrer da origem ao destino , então os protocolos de roteamento são resposabilidade da camada de rede.
+
+A camada de transporte é responsavem pela detecao e eliminação de erros que tenham ocorrido nas camadas inferiores, e tambem o controle de fluxo dos dados da origem ate o destino de uma forma ordenada garantindo que os dados da orgem e destino sejam os mesmos. Essa é uma camada fim a fim, estabelece uma comunicação direta entre origem e destino.
+
+A camada de sessão é resposanvel por processos que estejam em maquinas diferentes, ela controla quando a sessão inicia, termina, reinicia, então ela estabelece a comunicação entre a aplicação que esta na origem e a que esta no destino.
+
+A camada de apresentação faz a conversão dos formatos dos caracteres para eles serem usados na tranmissão, então quando o formato é diferente do formato ASC a camada de apresentação faz uma conversão. Tambem é resposavem pela conversão e criptografia
+
+A camada de aplicação ela diz respeito aos programas de computador que funcionam no cliente e servidor, é a camada onde estão os protocolos de comunicação para envio de arquivos, email e etc.
+
+
+O modelo Osi como falado no livro texto das disciplina, é um modelo de referencia, o que esta na pratica da internet é o modelo tcp/ip
+
+Conhecido como:
+Modelo TCP/IP, modelo internet ou ate mesmo
+ pilha tcp/ip também é um modelo em camadas, mas apenas 4
+
+fazendo uma junção das camadas fisica e de enlace do modelo osi, no modelo tcp/ip seria
+ a camada de rede ela controla os dispositivos de hardaware e meio físico que compoem a rede, o papel da camada de internet é determinar o melhor caminho atrvés da rede, A camada de transporte tem uma relalçao direta com a camada de transporte do modelo osi que possuii ate o o msm nome, ela da uporte a comunicação entre diversos dispositivos e redes distintas, e por fim a camada de aplicação é uma junção das camadas sessão, apresentação e aplicação do modelo osi.
+
+Cada uma dessas camadas esta definida atraves dos seus protocolos. Por exemplo o Http é um protocolo de aplicação, outro protocolo é o FTP utilizado para transferencia de arquivos. O TLS é usado para criptografia, O TCP e UDP fazem o controle de fluxo e da informação, o protocolo IP, NAT, ARP são protocolos que lidam com endereçamento de pacotes de informação. As tecnologias de ethernete wifi fazem parte da camada de enlace.
+
+
+
+ pROTOCOLOS
+
+Os protocolos definem o formato e a ordem das mensagens enviadas e recebidas pelas
+entidades da rede bem como as ações que são tomadas quando da transmissão ou
+recepção de mensagens. 
+
+ 
+
+
+
+ESCOPO DE REDES
+Uma forma de se classificar redes é através do seu escopo, seu tamanho geográfico, então a gente pode clasificar a rede atraves do seu alcance, os principais tipos são:
+
+
+
+Redes Locais LANs
+
+Redes Mewtropolitanas - MANs
+
+Redes WAN - 
+
+Redes Pessoais PAns
+
+
+
+
+
+Redes Locais LANs - é o mais comum, geralmente esta localizada em edificios, escritorios, escolas ou ate mesmo residencias. Como caracteristicas ela é uma rede de alta velocidade e privativa (alguem controla a rede e o acesso a ela) em uma area gelgrafica limitada.
+
+principais tecnologias: Ethernet, iEEE802.11(WLAN - rede wireless local). Os tipos de topologia: Barramento, anel, estrela, malha, árvore.
+
+Representação por Imagem: tem um dispositivo central e vários equipamento/dispositivos inteligados entre si por meio desse central.
+
+Redes Mewtropolitanas - MANs - é uma rede intermediaria entre LAAN E WAN. Ela tem uma area geografica limitada por uma região ou municipio por exemplo. Esse tipo de rede pode ser cabeada e também sem fio.Exemplo: rede de tv a cabo.
+
+ Redes WAN - Em uma WAN a comunicação se dá por uma distancia muiito longa, podendo ser centenas ouy ate milhares de km entre os dispositivos de redes. O interessante é que é póssivel usar uma WAn para interligar LANs remotas por exemplo, conectar uma LAN em um local a outra LAN em um local remoto. O uso mais comum é conectar uma rede local a internet.
+ Em uma rede WAN os hosts se comunicam através de sub-redes de comunicação, operados por uma empresa de telefonia ou uma ISP; Quando um pacote é enviado por meio de um ou mais roteadores
+intermediários, o pacote é armazenado em cada roteador intermediário,
+esperando uma linha de saída solicitada ser liberada, para então ser
+encaminhado;
+Esse tipo de sub-rede é chamada de store-and-forward (de armazenamento e
+encaminhamento) ou de comutação por pacotes;
+Em cada roteador é executado um software chamado algoritmo de
+roteamento, que toma a decisão para onde o pacote deve ser encaminhado.
+
+ Representação: WAn dentro de nuvem, e eu posso utlizar a WAN para interconectar várias LANs por exemplo. Cada lan em u pais e eu consigo ter interconectividade entre elas por meio dessa rede de longa distancia chamada de WAN. então poderia ter um servidro aqui em berlim e eu estar acessando esse servidor aqui da minha casa a internet utilizando o WAN;
+
+ Redes Pessoais PAns - esse escopo de rede remete a equipamentos que estão conectados a um computador, sendo considerada uma especie de rede privada. Como por exemplo cabo usb, bluetooth, NFC, IR(infravermelho).
+
+ Então posso ter mouse, teclados, celualr conectado a um computador, e todos esses esquipamentos que trocam dados com o computador como sendo o escopo de rede, o PAN e sua caracteristica é ter o espaço georgrafico bem limitado, de so uns poucos metros.
+
+ e existem outros escopos de redes alem dos citados, existem outras classificações de rede como: CAN, GAN, HAN, SAN etc.
+
+ TOPOLOGIA DE REDES
+
+ DIZ RESPEITO A ESTRUTURA DOS EQUIPAMENTOS, COMO ELES SE CONECTAM ENTRE SI. BASICAMENTE É A FORMA COMO OS DISPOSITIVOS FICAM COLOCADOS NA REDE, É COMO SE FOSSE ASSIM UM DESENHO DA REDE. As topologias mais comuns são: Barramento, Anel, Estrela, Malha, Hibrida.
+ Barramento: é quando os dispositivos sãoi ligados no mesmo cago. Esse tipo de topologia er amuito usado quando as redes eram feitas com cabo coaxial, desvatagens:  se o cabo se rompe todos os computadores perdem a conectividade.
+ Anel: Nesse tipo de topologia os computadores são ligados entre si, então os dados trafegam em uma direção passando por todos os dispositivos.
+ Estrela: Os dispositivos são conectados através de um dispositivo concentrador aqui no centro, normalmento um roteador ou switch. Esse é o mais usado atualmente. A vanatgem é que se houver problema em algum cabo ou porta os outros dispositivos seguem funcionando normalmente
+
+ Malha: Nesse tipo de topologia os nós possuem mais de uma conexão. Esse tipo de topologia não é muito comum em redes pequenas, é mais comum em redews grandes.
+
+ Hibrida: é quando  mais de uma topologia é usada na mesma rede, por exemplo: ..... citar exemplo
+
+ REDES DE ACESSO
+
+ Sabemos que na rede existem duas grandes estruturas, o npucleo da rede que é onde ficam os roteadores, e abroda da rede onde estão os host, os sistemas finais, onde as aplicações rodam. Para uma aplicação que esta no host se comunicar efeitvamente com ele, é necessário que ele atravesse o nucleo da rede. Esse caminho começa com o roteador de borda e a rede que conecta a esse roteador é chamada de rede de acesso.Ent]ao a rede de acesso nada mais é do que a aquela rede que da acesso ao nucleo da rede por meio do rooteador de borda.
+
+ Redes de acesso são aqueles que vão conectar os sistemas finais (computadores, celulares, GPS, tablets etc) ao primeiro roteador, que vai permitir o acesso desse sistema final até um outro qualquer (um servidor, por exemplo).
+
+ Exemplos de redes de acesso:
+Dial-up (discado);
+2 DSL (Digital Subscriber Line);
+3 Cabo;
+4 FTTH (Fiber-To-The-Home);
+5 Ethernet;
+6 WiFi;
+
+Dial-up (discado);
+Acesso à Internet por meio de linhas telefônicas analógicas utilizando um
+modem discado; Nesse tipo de conexão, o modem realmente disca para uma ISP (Provedor de Serviços de Internet) e faz uma chamada telefônica convencional (analógica).
+
+DSL-vanta  tipo de conexão que utiliza da linha telefônica para fornecer o serviço de internet, também utiliza a mesma rede, que emprega fios de cobre, geralmente em pares.
+
+A DSL (Digital Subscriber Line, é um tipo de rede que transmite os dados já no formado digital (diferente do dial-up, que é convertido analógico para 'andar' nos fios de telefonia).
+
+Junto com a rede via cabo, elas fornecem o serviço conhecido como 'banda larga'.
+Embora use o sistema de telefonia, como a dial-up, a rede de acesso via DSL não deixa as linhas telefônicas ocupadas, além de fornecer o envio e recebimento de dados em volume bem maios (velocidade mais rápida de internet) e é mais estável.
+
+CABO
+
+Outro tipo de rede de acesso bem conhecida e comum, é a via cabo.
+Os dados eram enviados e recebidos através dos mesmos meios físicos da TV á cabo (como Sky, NET etc).
+
+A velocidade nesse tipo de rede é bem melhor, além de não ocupar a linha de telefone, como era o caso da conexão discada. Porém, ela tem um custo maior, visto que precisa ter televisão a cabo para funcionar.
+
+FTTH:  é uma tecnologia que usa fibra óptica diretamente do ponto central para as instalações residenciais substituindo assim a infraestrutura de cobre existente, como fios de telefone e cabo coaxial. 
+
+ETHERNET - esse é o tipo de tecnologia das redes LAN, ou seja  uma area local de internet, que da acesso a uma rede interna e fechada. é bem comum em universidade e empresass, para que alunos e funcionarios acessem uma especie de internet local conectando diversos setores.
+
+Rede de Acesso: WiFi
+Atualmente, é uma das mais usadas e preferidas, principalmente pelo uso de smartphones e tablets, pois permitem que as pessoas acessem a internet de dispositivos móveis, sem uso de fios ou cabos, e em qualquer lugar.
+Geralmente essa WiFi é fornecida por um dispositivo (roteador) que recebe Internet de outro local (DSL, por exemplo) e emite o sinal WiFi. Assim, quanto mais próximo do roteador, a conexão tende a melhorar e o sinal ficar mais forte.
+
+
+
