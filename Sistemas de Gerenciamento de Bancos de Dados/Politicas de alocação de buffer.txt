@@ -1,0 +1,73 @@
+N1 a qtde de vezes que achei a pagina no buffer
+N2 qtd de vezes que tive que acessar disco
+
+Taxa de acerto(H):
+ H = N1 / (N1+N2)
+
+Tempo média p/ um sgbd acessar um dado no sistema de memória:
+TA = H.TA1 + (1-H).TA2
+
+TA1 é o tempo de acesso a mem principal
+TA2 é o tempo de acesso a mem secundária
+
+Tempo de transferencia da página(TB): é o tempo que leva p/ transferir a peg do disco p/ buffer
+TA2 = TB + TA1, então TA2 é o tempo de acesso a mem secundária é dada pelo tempo de trasferencia + tempo de acesso a MP.
+
+
+
+
+
+
+TA = TA1 + (1-H).TB
+O tempo médio para o sgbd acessar um dado no sistema de memória é:
+tempo de acesso a MP + (1-H) . tempo de transferência
+
+dessa forma não precisa saber qual tempo de acesso a mem secundária
+
+
+LRU: tira do buffer a página que não tem sido referenciada por mais tempo
+
+O gerenciador de buffer vai ter um contador global C e toda vez que uma pagina P for referenciada o C é incrementado, e o valor de C qunado incremento esse contador global, eu armazeno esse valor desse contado C na pagina que foi referenciada.
+
+Existe o contador global C e esse valor de C é associado a pagina que foi referenciada naquele moemento e houve o incrmento de C, então se houve incremnto de C eu armazeno esse valor associado a pagina. Na politica do LRU a página a ser substituida vai ser a página com menor valor de C, pois quem tem menor valor de C foi referencida mais remotamente.
+Desvantagem: Eu posso ter uma página q foi referenciada a 10 min atras mas ela foi mto referenciada e as páginas mais recentes tem 1 min so, então dependedno da carga de trabalho seia maios interessante manter a pg que foi referenciada 10 min atras so que mais vezes, pq eu vou ficar tirando essa pagina do buffer e logo em seguida ela pode ser referenciada novamente.
+
+
+LFU: tira do buffer a pagina que tem menor frequencia de referencia
+
+Trabalha com ideia de contador, mas não global, tem um contador C para cada pagina que ta na area de buffer. Toda vez que pagina P que esta na area de buffer for referenciada o C dessa pagina é incrementada.C  representa  a frequencia que sa pagina é referenciada. entao a pagina ser escolhida para sair do buffer será a pagina com menor valor para C.
+
+O principio de funcionamento das 2 politicas depende da carga de trabalho
+
+LRU-------
+
+ARC - se adapta dinamicamente a carga de trabalho
+
+A área de buffer é dividida em duas areas, L1 e L2
+L1 prioriza a recência e L2 a frequencia.
+Sempre que uma página é carrega de disco para a área de buffer pela primeira vez, ela vai para L1.
+Quando uma página que estava em L1 foi referenciada mais que duas vezes, ela sai de L1 e vem pra L2.
+Cada área L1 e L2 possuem campos B e T, na L1 B1 e T1 e na L2 T2 e B2.
+Na T1 eu tenho realmente as páginas em buffer que foram reeferenciadas mais recenteente. Em T2 tenho as páginas que tiveram frequencia de acesso maior que dois mas que foram mais recentemente referenciadas.
+Em B1 não tenho páginas de buffer, tenho o endereço das páginas que tavam em L1 e foram escolhidas para sair de L1. Ou seja em B! tenho o endereço das páginas que sairam de T1.
+Se vou referenciar uma página que não está na area de buffer mas encontro o endereço dela em B1, significa que ela saiu recentemente da area T1 então nesse caso eu não substituo uma página em T1, eu aumento T1 para priorizar a recencia. A mesma coisa valeria se eu fosse referenciar uma página que não esta mais em buffer
+mas encontrei o endereço dela em B2, o que siginifica que foi mais frequentemente referenciada em um passado recente e quando eu for carregar essa página eu não substituiria uma página em T2, eu aumentaria uma area em T2
+
+
+A política ARC mantém uma lista de páginas LRU tanto em L1 quando em L2, onde em cada area dessas eu tenho páginas relaemntr e endereço dessas areas.
+A quantidade (cardinalidade) de páginas de L1 + L2 = 2C que é minha área de buffer. Ajanela deslizante é metade da área de buffer, a outra metade utilzo tanto de L1 quanto L2.
+c = T1 + T2, c = B1 + B2, logo a a rea de buffer é 2c
+
+
+Uma página Pi é carregada em Li se ela foi referenciada a primeira vez.
+Uma página Pk qualquer vai estar em L2 se ela tiver sido referenciada mais que 2 vezes
+
+
+Toda vida que uma página é acessada em disco e carregada na memoria principal ela vai para T1. Quando essa página for referenciada mais duas vezes ela vai migrar para T2, se T2 estiver cheia uma páginad e T2 terá que sair e será a página que foi menos frequentemente referenciada, movo o endereço dela para B2, libero o conteúdo dela em T2 para carregar aquela página estava em T1.
+Se eu eu for carregar uma página e T1 está cheia, escolho uma página para sair e o endereço dela vai para B1, se essa página for acessada novamente e encontrei o endereço dela em B1, vou em disco e não escolho uma página para sair de T1, eu amento uma area de T1 e diminui uma de T2
+
+
+
+
+
+
